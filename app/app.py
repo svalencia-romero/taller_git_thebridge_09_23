@@ -12,80 +12,105 @@ def main():
     
     def info_main():
         st.title ("Información principal de git hub")
+        git_bas = st.checkbox("¿Que es Git?, ¿Que es Git Hub?, Diferencias entre ambas")
+        if git_bas:
+            st.write("Todo lo relacionado con git al inicio.")
     def com_bas():
         st.title ("Comandos basicos de Git Hub")
     def link_repo():
         st.title ("Enlaces a repositorios")
         st.title ("Escoger el enlace a repositorio indicado y aplicar un git clone")
-        adrian = st.checkbox("Repositorio de Adrian Nieto Muñoz")
+        adrian = st.checkbox("Repositorio de Adrian")
         if adrian:
-            st.write("*Enlace a repo")
-        agueda = st.checkbox("Repositorio de Águeda González Valle")
+            st.write("https://github.com/TiagoValen/githubtaller_adrian")
+        
+        agueda = st.checkbox("Repositorio de Águeda")
         if agueda:
-            st.write("*Enlace a repo")
-        alex = st.checkbox("Repositorio de Alejandro Campos Ochoa")
+            st.write("https://github.com/TiagoValen/githubtaller_agueda")
+        
+        alex = st.checkbox("Repositorio de Alejandro")
         if alex:
-            st.write("*Enlace a repo")
-        ana = st.checkbox("Repositorio de Ana Fernández de la Coba")
+            st.write("https://github.com/TiagoValen/githubtaller_alejandro")
+        
+        ana = st.checkbox("Repositorio de Ana")
         if ana:
-            st.write("*Enlace a repo")
-        daniel_manso = st.checkbox("Repositorio de Daniel Manso Reyes")
+            st.write("https://github.com/TiagoValen/githubtaller_ana")
+        
+        daniel_manso = st.checkbox("Repositorio de Daniel Manso")
         if daniel_manso:
-            st.write("*Enlace a repo")
+            st.write("https://github.com/TiagoValen/githubtaller_danielmanso")
+        
         daniel_rendon = st.checkbox("Repositorio de Daniel Rendón")
         if daniel_rendon:
-            st.write("*Enlace a repo")
-        diego = st.checkbox("Repositorio de Diego Núñez González")
+            st.write("https://github.com/TiagoValen/githubtaller_danielrendon")
+        
+        diego = st.checkbox("Repositorio de Diego")
         if diego:
-            st.write("*Enlace a repo")
-        guillermo = st.checkbox("Repositorio de Guillermo J. Pereda Pérez")
+            st.write("https://github.com/TiagoValen/githubtaller_diego")
+        
+        guillermo = st.checkbox("Repositorio de Guillermo")
         if guillermo:
-            st.write("*Enlace a repo")
-        hugo = st.checkbox("Repositorio de Hugo Martín-Santos García")
+            st.write("https://github.com/TiagoValen/githubtaller_guillermo")
+        
+        hugo = st.checkbox("Repositorio de Hugo")
         if hugo:
-            st.write("*Enlace a repo")
-        javier = st.checkbox("Repositorio de Javier Luis de Alcázar García")
+            st.write("https://github.com/TiagoValen/githubtaller_hugo")
+        
+        javier = st.checkbox("Repositorio de Javier")
         if javier:
-            st.write("*Enlace a repo")
-        joan = st.checkbox("Repositorio de Joan Salvador Calabuig")
+            st.write("https://github.com/TiagoValen/githubtaller_javier")
+        
+        joan = st.checkbox("Repositorio de Joan")
         if joan:
-            st.write("*Enlace a repo")
+            st.write("https://github.com/TiagoValen/githubtaller_joan")
+        
         joaquin = st.checkbox("Repositorio de Joaquín Galvez")
         if joaquin:
-            st.write("*Enlace a repo")
-        july = st.checkbox("Repositorio de July Vargas")
+            st.write("https://github.com/TiagoValen/githubtaller_kino")
+        
+        july = st.checkbox("Repositorio de July")
         if july:
-            st.write("*Enlace a repo")
-        luis = st.checkbox("Repositorio de Luis Ángel Soler Zamora")
+            st.write("https://github.com/TiagoValen/githubtaller_july")
+        
+        luis = st.checkbox("Repositorio de Luis Ángel")
         if luis:
-            st.write("*Enlace a repo")
-        manuel = st.checkbox("Repositorio de Manuel Reina Fernández")
+            st.write("https://github.com/TiagoValen/githubtaller_luisangel")
+        
+        manuel = st.checkbox("Repositorio de Manuel")
         if manuel:
-            st.write("*Enlace a repo")
-        maria = st.checkbox("Repositorio de Maria Neches Hernandez")
+            st.write("https://github.com/TiagoValen/githubtaller_manuel")
+        
+        maria = st.checkbox("Repositorio de Maria")
         if maria:
-            st.write("*Enlace a repo")
-        matias = st.checkbox("Repositorio de Matias Ezequiel Ibarra")
+            st.write("https://github.com/TiagoValen/githubtaller_maria")
+        
+        matias = st.checkbox("Repositorio de Matias")
         if matias:
-            st.write("*Enlace a repo")
-        miguel = st.checkbox("Repositorio de Miguel Ángel Ruíz Mico")
+            st.write("https://github.com/TiagoValen/githubtaller_matias")
+        
+        miguel = st.checkbox("Repositorio de Miguel Ángel")
         if miguel:
-            st.write("*Enlace a repo")
-        raimundo = st.checkbox("Repositorio de Raimundo Sieso Ortiz")
+            st.write("https://github.com/TiagoValen/githubtaller_miguel")
+        
+        raimundo = st.checkbox("Repositorio de Raimundo")
         if raimundo:
-            st.write("*Enlace a repo")
-        rodrigo = st.checkbox("Repositorio de Rodrigo Arribas Solano")
+            st.write("https://github.com/TiagoValen/githubtaller_raimundo")
+        
+        rodrigo = st.checkbox("Repositorio de Rodrigo")
         if rodrigo:
-            st.write("*Enlace a repo")
-        sara = st.checkbox("Repositorio de Sara Salguero")
+            st.write("https://github.com/TiagoValen/githubtaller_rodrigo")
+        
+        sara = st.checkbox("Repositorio de Sara")
         if sara:
-            st.write("*Enlace a repo")
-        sergio = st.checkbox("Repositorio de Sergio Rubio Cabanillas")
+            st.write("https://github.com/TiagoValen/githubtaller_sara")
+        
+        sergio = st.checkbox("Repositorio de Sergio")
         if sergio:
-            st.write("*Enlace a repo")
-        steven = st.checkbox("Repositorio de Steven Noboa Ordóñez")
+            st.write("https://github.com/TiagoValen/githubtaller_sergio")
+        
+        steven = st.checkbox("Repositorio de Steven")
         if steven:
-            st.write("*Enlace a repo")
+            st.write("https://github.com/TiagoValen/githubtaller_steven")
     
     # Configuración de la página y de menu de selección de taller
     
