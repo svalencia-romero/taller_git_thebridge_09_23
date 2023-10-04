@@ -2,6 +2,8 @@
 import streamlit as st
 import os
 
+git_clone = "Referencia a git clone"
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # Inicio de git, opciones y menus.
@@ -17,100 +19,36 @@ def main():
             st.write("Todo lo relacionado con git al inicio.")
     def com_bas():
         st.title ("Comandos basicos de Git Hub")
+        st.markdown("#### En este apartado tendras acceso a los comandos básico de git hub")
+        option = st.selectbox(("¿Que comando quieres utilizar?"),("ADD","Commit","Clone"),index=None,placeholder="Seleccione el comando")
     def link_repo():
         st.title ("Enlaces a repositorios")
-        st.title ("Escoger el enlace a repositorio indicado y aplicar un git clone")
-        adrian = st.checkbox("Repositorio de Adrian")
-        if adrian:
-            st.write("https://github.com/TiagoValen/githubtaller_adrian")
-        
-        agueda = st.checkbox("Repositorio de Águeda")
-        if agueda:
-            st.write("https://github.com/TiagoValen/githubtaller_agueda")
-        
-        alex = st.checkbox("Repositorio de Alejandro")
-        if alex:
-            st.write("https://github.com/TiagoValen/githubtaller_alejandro")
-        
-        ana = st.checkbox("Repositorio de Ana")
-        if ana:
-            st.write("https://github.com/TiagoValen/githubtaller_ana")
-        
-        daniel_manso = st.checkbox("Repositorio de Daniel Manso")
-        if daniel_manso:
-            st.write("https://github.com/TiagoValen/githubtaller_danielmanso")
-        
-        daniel_rendon = st.checkbox("Repositorio de Daniel Rendón")
-        if daniel_rendon:
-            st.write("https://github.com/TiagoValen/githubtaller_danielrendon")
-        
-        diego = st.checkbox("Repositorio de Diego")
-        if diego:
-            st.write("https://github.com/TiagoValen/githubtaller_diego")
-        
-        guillermo = st.checkbox("Repositorio de Guillermo")
-        if guillermo:
-            st.write("https://github.com/TiagoValen/githubtaller_guillermo")
-        
-        hugo = st.checkbox("Repositorio de Hugo")
-        if hugo:
-            st.write("https://github.com/TiagoValen/githubtaller_hugo")
-        
-        javier = st.checkbox("Repositorio de Javier")
-        if javier:
-            st.write("https://github.com/TiagoValen/githubtaller_javier")
-        
-        joan = st.checkbox("Repositorio de Joan")
-        if joan:
-            st.write("https://github.com/TiagoValen/githubtaller_joan")
-        
-        joaquin = st.checkbox("Repositorio de Joaquín Galvez")
-        if joaquin:
-            st.write("https://github.com/TiagoValen/githubtaller_kino")
-        
-        july = st.checkbox("Repositorio de July")
-        if july:
-            st.write("https://github.com/TiagoValen/githubtaller_july")
-        
-        luis = st.checkbox("Repositorio de Luis Ángel")
-        if luis:
-            st.write("https://github.com/TiagoValen/githubtaller_luisangel")
-        
-        manuel = st.checkbox("Repositorio de Manuel")
-        if manuel:
-            st.write("https://github.com/TiagoValen/githubtaller_manuel")
-        
-        maria = st.checkbox("Repositorio de Maria")
-        if maria:
-            st.write("https://github.com/TiagoValen/githubtaller_maria")
-        
-        matias = st.checkbox("Repositorio de Matias")
-        if matias:
-            st.write("https://github.com/TiagoValen/githubtaller_matias")
-        
-        miguel = st.checkbox("Repositorio de Miguel Ángel")
-        if miguel:
-            st.write("https://github.com/TiagoValen/githubtaller_miguel")
-        
-        raimundo = st.checkbox("Repositorio de Raimundo")
-        if raimundo:
-            st.write("https://github.com/TiagoValen/githubtaller_raimundo")
-        
-        rodrigo = st.checkbox("Repositorio de Rodrigo")
-        if rodrigo:
-            st.write("https://github.com/TiagoValen/githubtaller_rodrigo")
-        
-        sara = st.checkbox("Repositorio de Sara")
-        if sara:
-            st.write("https://github.com/TiagoValen/githubtaller_sara")
-        
-        sergio = st.checkbox("Repositorio de Sergio")
-        if sergio:
-            st.write("https://github.com/TiagoValen/githubtaller_sergio")
-        
-        steven = st.checkbox("Repositorio de Steven")
-        if steven:
-            st.write("https://github.com/TiagoValen/githubtaller_steven")
+        st.markdown ("##### Escoger el enlace correspondiente a tu nombre y aplicar un git clone al repositorio adecuado.")
+        st.markdown ("###### (Solo os voy a dar acceso al repositorio indicado por lo que solo podreis acceder al repositorio que tiene vuestro nombre)")
+        # Botones de enlace a cada repositorio 
+        st.link_button("Repositorio de Adrian","https://github.com/TiagoValen/githubtaller_adrian")
+        st.link_button("Repositorio de Águeda","https://github.com/TiagoValen/githubtaller_agueda")
+        st.link_button("Repositorio de Alejandro","https://github.com/TiagoValen/githubtaller_alejandro")
+        st.link_button("Repositorio de Ana","https://github.com/TiagoValen/githubtaller_ana")
+        st.link_button("Repositorio de Daniel Manso","https://github.com/TiagoValen/githubtaller_danielmanso")
+        st.link_button("Repositorio de Daniel Rendón","https://github.com/TiagoValen/githubtaller_danielrendon")
+        st.link_button("Repositorio de Diego","https://github.com/TiagoValen/githubtaller_diego")
+        st.link_button("Repositorio de Guillermo","https://github.com/TiagoValen/githubtaller_guillermo")
+        st.link_button("Repositorio de Hugo","https://github.com/TiagoValen/githubtaller_hugo")
+        st.link_button("Repositorio de Javier","https://github.com/TiagoValen/githubtaller_javier")
+        st.link_button("Repositorio de Joan","https://github.com/TiagoValen/githubtaller_joan")
+        st.link_button("Repositorio de Kino","https://github.com/TiagoValen/githubtaller_kino")
+        st.link_button("Repositorio de July","https://github.com/TiagoValen/githubtaller_july")
+        st.link_button("Repositorio de Luis Ángel","https://github.com/TiagoValen/githubtaller_luisangel")
+        st.link_button("Repositorio de Manuel","https://github.com/TiagoValen/githubtaller_manuel")
+        st.link_button("Repositorio de Maria","https://github.com/TiagoValen/githubtaller_maria")
+        st.link_button("Repositorio de Matias","https://github.com/TiagoValen/githubtaller_matias")
+        st.link_button("Repositorio de Miguel ","https://github.com/TiagoValen/githubtaller_miguel")
+        st.link_button("Repositorio de Raimundo","https://github.com/TiagoValen/githubtaller_raimundo")
+        st.link_button("Repositorio de Rodrigo","https://github.com/TiagoValen/githubtaller_rodrigo")
+        st.link_button("Repositorio de Sara","https://github.com/TiagoValen/githubtaller_sara")
+        st.link_button("Repositorio de Sergio","https://github.com/TiagoValen/githubtaller_sergio")
+        st.link_button("Repositorio de Steven","https://github.com/TiagoValen/githubtaller_steven")
     
     # Configuración de la página y de menu de selección de taller
     
