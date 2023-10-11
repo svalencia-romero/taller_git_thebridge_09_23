@@ -3,7 +3,7 @@ import os
 
 
 # Para hacer deploy en streamlit, descomentar lineas de imagenes con paths correctos y comentar la linea anterior.
-# Aquí va el codigo del streamlit para el taller
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -15,22 +15,30 @@ page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y
 
 def info_main():
     st.markdown ("<h2 style='text-align: center; color: black;'>Introducción a GitHub y contenido del taller</h2>",unsafe_allow_html=True)
-    git_bas = st.checkbox("¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.")
-    if git_bas:
+    
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Como añadir información a mi repositorio"]),index=None,placeholder="Seleccione la información")
+    
+    if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
         st.markdown("###### - Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
         st.markdown("###### - GitHub, por otro lado, es una plataforma en línea que utiliza Git como motor subyacente.")
         st.markdown("###### - En resumen, Git es el sistema de control de versiones que te permite rastrear los cambios en tu código en tu computadora local, mientras que GitHub es una plataforma en línea que utiliza Git para alojar repositorios en la nube, facilitando la colaboración y la gestión de proyectos de software.")
-    prim_pasos = st.checkbox("Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio")
-    if prim_pasos:
-        st.markdown("- Primero necesitamos configurar tu cuenta de github en el VSC, para ello entramos en la consola de VSC y ejecutamos lo siguiente(cambiando los valores de tu nombre por nombre de usuario y tu@email.com por tu email)")
-        st.image(("../img/git_config.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_config.png")) Para deploy
-        st.markdown("- Ahora crearemos nuestro repositorio, primero hay que iniciar sesión en github, hacer click en repositories para después hacer click en New")
-        st.image(("../img/git_config_2.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
-        st.markdown("- Esta es la pantalla de creación de repositorio.")
-        st.image(("../img/git_config_3.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
+    
+    if option_info == "Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio": # Aquí habrá dos checkbox para no meter mucha información de una vez.
+        
+        config_github = st.checkbox("Configuración de Github en VSC") # Primer checkbox en primeros pasos
+        if config_github:
+            st.markdown("- Primero necesitamos configurar tu cuenta de github en el VSC, para ello entramos en la consola de VSC y ejecutamos lo siguiente(cambiando los valores de tu nombre por nombre de usuario y tu@email.com por tu email)")
+            st.image(("../img/git_config.png"))
+            # st.image(os.path.join(dir_path,"..","img","git_config.png")) Para deploy
+        
+        new_repo = st.checkbox("Creación de repositorio") # Segundo checkbox en primeros pasos
+        if new_repo:
+            st.markdown("- Ahora crearemos nuestro repositorio, primero hay que iniciar sesión en github, hacer click en repositories para después hacer click en New")
+            st.image(("../img/git_config_2.png"))
+            # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
+            st.markdown("- Esta es la pantalla de creación de repositorio.")
+            st.image(("../img/git_config_3.png"))
+            # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
 def com_bas():
     st.markdown ("<h2 style='text-align: center; color: black;'>Comandos basicos de Git Hub</h2>",unsafe_allow_html=True)
     st.markdown("#### En este apartado tendras acceso a los comandos básicos de git hub")
