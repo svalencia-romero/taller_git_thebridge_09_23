@@ -16,29 +16,53 @@ page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y
 def info_main():
     st.markdown ("<h2 style='text-align: center; color: black;'>Introducción a GitHub y contenido del taller</h2>",unsafe_allow_html=True)
     
-    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Como añadir información a mi repositorio"]),index=None,placeholder="Seleccione la información")
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Como añadir nueva información a mi repositorio"]),index=None,placeholder="Seleccione la información")
     
     if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
-        st.markdown("###### - Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
-        st.markdown("###### - GitHub, por otro lado, es una plataforma en línea que utiliza Git como motor subyacente.")
-        st.markdown("###### - En resumen, Git es el sistema de control de versiones que te permite rastrear los cambios en tu código en tu computadora local, mientras que GitHub es una plataforma en línea que utiliza Git para alojar repositorios en la nube, facilitando la colaboración y la gestión de proyectos de software.")
+        st.markdown("- Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
+        st.markdown("- GitHub, por otro lado, es una plataforma en línea que utiliza Git como motor subyacente.")
+        st.markdown("- En resumen, Git es el sistema de control de versiones que te permite rastrear los cambios en tu código en tu computadora local, mientras que GitHub es una plataforma en línea que utiliza Git para alojar repositorios en la nube, facilitando la colaboración y la gestión de proyectos de software.")
     
     if option_info == "Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio": # Aquí habrá dos checkbox para no meter mucha información de una vez.
         
         config_github = st.checkbox("Configuración de Github en VSC") # Primer checkbox en primeros pasos
         if config_github:
-            st.markdown("- Primero necesitamos configurar tu cuenta de github en el VSC, para ello entramos en la consola de VSC y ejecutamos lo siguiente(cambiando los valores de tu nombre por nombre de usuario y tu@email.com por tu email)")
+            st.markdown("- Primero necesitamos configurar tu cuenta de github en el VSC, para ello entramos en la consola de VSC y ejecutamos lo siguiente(cambiando los valores de \"Tu Nombre\" por tu nombre de usuario en Github y \"tu@email. com\" por tu email)")
             st.image(("../img/git_config.png"))
             # st.image(os.path.join(dir_path,"..","img","git_config.png")) Para deploy
         
         new_repo = st.checkbox("Creación de repositorio") # Segundo checkbox en primeros pasos
         if new_repo:
-            st.markdown("- Ahora crearemos nuestro repositorio, primero hay que iniciar sesión en github, hacer click en repositories para después hacer click en New")
+            st.markdown("- Ahora crearemos nuestro repositorio, tenemos que iniciar sesión en github, hacer click en \"Repositories \"  para después hacer click en \"New\".")
             st.image(("../img/git_config_2.png"))
             # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
             st.markdown("- Esta es la pantalla de creación de repositorio.")
             st.image(("../img/git_config_3.png"))
             # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
+    
+    if option_info == "Como añadir nueva información a mi repositorio": # Aquí habrá dos checkbox para no meter mucha información de una vez.
+        
+        añad_info_term = st.checkbox("Añadir información desde terminal") # Primer checkbox información
+        if añad_info_term:
+            st.markdown("- Para añadir información desde terminal, ejecutamos el siguiente comando: git add . (cuidado no olvidar el punto del final de la instrucción)")
+            st.image(("../img/add_1.png"))
+            # st.image(os.path.join(dir_path,"..","img","add_1.png")) Para deploy
+            st.markdown("- Una vez has añadido la información que quieres subir a tu repositorio, ejecutamos el siguiente comando: git commit -m \"mensaje que quieras añadir\"")
+            st.image(("../img/add_2.png"))
+            # st.image(os.path.join(dir_path,"..","img","add_2.png")) Para deploy
+            st.markdown("- Ya tenemos la información preparada y con un mensaje de los cambios que hemos hecho, los vamos a mandar a nuestro repositorio de Github con el comando: git push")
+            st.image(("../img/add_3.png"))
+            # st.image(os.path.join(dir_path,"..","img","add_3.png")) Para deploy
+        
+        añad_info_infc = st.checkbox("Añadir información con Interface de VSC") # Segundo checkbox información
+        if añad_info_infc:
+            st.markdown("- Vamos añadir los archivos que aparacen en la pestaña de \"Source code\"" )
+            st.image(("../img/add_1_ejemplo_infc.png"))
+            # st.image(os.path.join(dir_path,"..","img","add_1_ejemplo_infc.png")) Para deploy
+            st.markdown("- Después solo hay que hacer commit & push haciendo click")
+            st.image(("../img/add_2_ejemplo_infc.png"))
+            # st.image(os.path.join(dir_path,"..","img","add_2_ejemplo_infc.png")) Para deploy
+            
 def com_bas():
     st.markdown ("<h2 style='text-align: center; color: black;'>Comandos basicos de Git Hub</h2>",unsafe_allow_html=True)
     st.markdown("#### En este apartado tendras acceso a los comandos básicos de git hub")
@@ -85,7 +109,6 @@ def link_repo():
     st.link_button("Repositorio de Matias","https://github.com/TiagoValen/githubtaller_matias")
     st.link_button("Repositorio de Miguel ","https://github.com/TiagoValen/githubtaller_miguel")
     st.link_button("Repositorio de Raimundo","https://github.com/TiagoValen/githubtaller_raimundo")
-    st.link_button("Repositorio de Rodrigo","https://github.com/TiagoValen/githubtaller_rodrigo")
     st.link_button("Repositorio de Sara","https://github.com/TiagoValen/githubtaller_sara")
     st.link_button("Repositorio de Steven","https://github.com/TiagoValen/githubtaller_steven")
 
