@@ -21,7 +21,7 @@ def info_main():
 
 # SELECTOR CONTENIDO EN MAIN 
 
-    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)"]),index=None,placeholder="Seleccione la información")
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas (branch) y mezclar información de diferentes ramas ","Resolución de conflictos"]),index=None,placeholder="Seleccione la información")
     
     if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
         st.markdown("- Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
@@ -108,22 +108,54 @@ def info_main():
             # st.image(os.path.join(dir_path,"..","img","branch_2.png")) Para deploy
         añad_info_branch_3 = st.checkbox("¿Como crear una rama (branch) con la interface de VSC?") # Tercer checkbox branch 
         if añad_info_branch_3:
-            st.image(("../img/branch_3.png"))
-            # st.image(os.path.join(dir_path,"..","img","branch_3.png")) Para deploy
+            st.markdown("- Otra manera de hacer ramas es la siguiente:")
+            st.markdown("- En la parte inferior izquierda del VSC podeis encontrar lo siguiente:")
+            st.image(("../img/branch_1_intf.jpg"))
+            st.markdown("- Al hacer click, en la parte superior se abrira un panel donde podremos crear una rama, en la misma rama donde estamos o desde otra rama concreta que queramos.")
+            # st.image(os.path.join(dir_path,"..","img","branch_1_intf.jpg")) Para deploy
+            st.image(("../img/branch_2_intf.jpg"))
+            st.markdown("- Una vez creada (en este caso se llama santi_prueba_2, ya aparecerá para ser selccionada y poder trabajar)")
+            # st.image(os.path.join(dir_path,"..","img","branch_2_intf.jpg")) Para deploy
+            st.image(("../img/branch_3_intf.jpg"))
+            # st.image(os.path.join(dir_path,"..","img","branch_3_intf.jpg")) Para deploy
+            st.markdown("- También desde el menu de Source Control lo podemos hacer:")
+            st.image(("../img/branch_1_int_sc.png"))
+            # st.image(os.path.join(dir_path,"..","img","branch_1_int_sc.png")) Para deploy
+            st.image(("../img/branch_2_int_sc.png"))
+            # st.image(os.path.join(dir_path,"..","img","branch_2_int_sc.png")) Para deploy
+            st.markdown("- Una vez ya está la rama creada de una u otra manera, podemos directamente posicionarnos sobre ella y empezar a trabajar")
+            st.image(("../img/branch_3_int_sc.png"))
+            # st.image(os.path.join(dir_path,"..","img","branch_3_int_sc.png")) Para deploy
 
 # HACER MERGE      
  
-    # if option_info == "Juntar ramas (branch) y mezclar información de diferentes ramas ": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
+    if option_info == "Juntar ramas (branch) y mezclar información de diferentes ramas ": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
+        st.markdown("* git clone <link del repositorio>")
 
 # RESOLUCION DE CONFLICTOS
 
-    # if option_info == "Resolución de conflictos": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
-
+    if option_info == "Resolución de conflictos": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
+        st.markdown("* git clone <link del repositorio>")
 def com_bas():
     st.markdown ("<h2 style='text-align: center; color: black;'>Comandos basicos de Git Hub</h2>",unsafe_allow_html=True)
-    st.markdown("#### En este apartado tendras acceso a los comandos básicos de git hub")
-    # option = st.selectbox(("¿Que comando quieres utilizar?"),("ADD","Commit","Clone"),index=None,placeholder="Seleccione el comando")
-    # if option == "Clone":
+    st.markdown("#### En este apartado tendras acceso a los comandos básicos de git hub:")
+    st.markdown("* git clone <link del repositorio>")
+    st.markdown("* git add <archivo>")
+    st.markdown("* git add -A  (también puede añadir cambios de esta manera: \" git add . \")")
+    st.markdown("* git commit -m \"<mensaje para dejar claro los cambios que estás haciendo>\"")
+    st.markdown("* git push")
+    st.markdown("* git pull")
+    st.markdown("* git branch --list")
+    st.markdown("* git branch <nombre de tu rama>")
+    st.markdown("* git branch -d")
+    st.markdown("* git checkout <nombre de tu rama")
+    st.markdown("* git checkout -b <nombre de la rama que quieres crear>")
+    st.markdown("* git log")
+    st.markdown("* git status")
+    st.markdown("* git revert <el código de commit que quieres deshacer>")
+
+
+    
         
 def link_repo():
     st.markdown ("<h2 style='text-align: center; color: black;'>Enlaces a repositorios</h2>",unsafe_allow_html=True)
@@ -156,7 +188,7 @@ def link_repo():
 
 if page == "Introducción a GitHub y contenido del taller":
     info_main()
-elif page == "Comandos básicos de Git Hub":
+elif page == "Resumen lista comandos básicos":
     com_bas()
 elif page == "Enlaces a repositorios":
     link_repo()
