@@ -105,7 +105,7 @@ def info_main():
             st.markdown("- git checkout <nombre de tu branch que has creado anteriormente> - Con este comando nos moveremos a la branch que has creado para poder trabajar en ella.")
             st.markdown("- git branch -d <nombre de tu branch que has creado anteriormente> - Con este comando podremos borrar la branch que hemos creado anteriormente(tienes que estar fuera de la branch que quieres borrar porque dará error)")
             # st.image(("../img/branch_1.png"))
-            st.image(os.path.join(dir_path,"..","img","branch_2.png")) #Para deploy
+            st.image(os.path.join(dir_path,"..","img","branch_1.png")) #Para deploy
             st.markdown("Al finalizar de crear la rama siquieres subir tu rama al repositorio deberás hacer dentro de la rama creada \" git push \" , en caso contrario no se subiran los cambios.")
         añad_info_branch_3 = st.checkbox("¿Como crear una rama (branch) con la interface de VSC?") # Tercer checkbox branch 
         if añad_info_branch_3:
