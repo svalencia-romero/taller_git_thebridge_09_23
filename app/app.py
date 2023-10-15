@@ -21,7 +21,7 @@ def info_main():
 
 # SELECTOR CONTENIDO EN MAIN 
 
-    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas (branch) y mezclar información de diferentes ramas ","Resolución de conflictos"]),index=None,placeholder="Seleccione la información")
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas y actualizar cambios","Resolución de conflictos"]),index=None,placeholder="Seleccione la información")
     
     if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
         st.markdown("- Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
@@ -115,8 +115,9 @@ def info_main():
             st.image(os.path.join(dir_path,"..","img","branch_1_intf.jpg"))#Para deploy
             st.markdown("- Al hacer click, en la parte superior se abrira un panel donde podremos crear una rama, en la misma rama donde estamos o desde otra rama concreta que queramos.")
             # st.image(("../img/branch_2_intf.jpg"))
-            st.markdown("- Una vez creada (en este caso se llama santi_prueba_2, ya aparecerá para ser selccionada y poder trabajar)")
             st.image(os.path.join(dir_path,"..","img","branch_2_intf.jpg")) #Para deploy
+            st.markdown("- Una vez creada (en este caso se llama santi_prueba_2, ya aparecerá para ser selccionada y poder trabajar)")
+            
             # st.image(("../img/branch_3_intf.jpg"))
             st.image(os.path.join(dir_path,"..","img","branch_3_intf.jpg")) #Para deploy
             st.markdown("- También desde el menu de Source Control lo podemos hacer:")
