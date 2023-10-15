@@ -11,18 +11,25 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 st.markdown("<h1 style='text-align: center; color: black;'>Taller de Git Hub 2023</h1>", unsafe_allow_html=True) 
 st.image(("../img/git_image.jpg"))
 # st.image(os.path.join(dir_path,"..","img","git_image.jpg")) Para deploy
-page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y contenido del taller", "Comandos básicos de Git Hub", "Enlaces a repositorios"),index=None,placeholder="Selección de contenido")
+
+# SELECTOR DE TODO EL CONTENIDO 
+
+page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y contenido del taller", "Resumen lista comandos básicos", "Enlaces a repositorios"),index=None,placeholder="Selección de contenido")
 
 def info_main():
     st.markdown ("<h2 style='text-align: center; color: black;'>Introducción a GitHub y contenido del taller</h2>",unsafe_allow_html=True)
-    
-    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Como añadir nueva información a mi repositorio"]),index=None,placeholder="Seleccione la información")
+
+# SELECTOR CONTENIDO EN MAIN 
+
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)"]),index=None,placeholder="Seleccione la información")
     
     if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
         st.markdown("- Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
         st.markdown("- GitHub, por otro lado, es una plataforma en línea que utiliza Git como motor subyacente.")
         st.markdown("- En resumen, Git es el sistema de control de versiones que te permite rastrear los cambios en tu código en tu computadora local, mientras que GitHub es una plataforma en línea que utiliza Git para alojar repositorios en la nube, facilitando la colaboración y la gestión de proyectos de software.")
-    
+
+# CONFIG Y CREACION DE UN REPOSITORIO    
+
     if option_info == "Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio": # Aquí habrá dos checkbox para no meter mucha información de una vez.
         
         config_github = st.checkbox("Configuración de Github en VSC") # Primer checkbox en primeros pasos
@@ -39,7 +46,28 @@ def info_main():
             st.markdown("- Esta es la pantalla de creación de repositorio.")
             st.image(("../img/git_config_3.png"))
             # st.image(os.path.join(dir_path,"..","img","git_config_2.png")) Para deploy
-    
+# CLONAR REPOSITORIO
+
+    if option_info == "Clonar repositorio en VSC":
+        st.markdown("- Primero entra en el repositorio y haz click en code")
+        st.image(("../img/git_clone.png"))
+        # st.image(os.path.join(dir_path,"..","img","git_clone.png")) Para deploy
+        st.markdown("- Después haz click en el icono indicado y copia el enlace")
+        st.image(("../img/git_clone_2.png"))
+        # st.image(os.path.join(dir_path,"..","img","git_clone_2.png")) Para deploy
+        st.markdown("- Antes de hacer el git clone debes añadir un espacio de trabajo nuevo.")
+        st.image(("../img/git_clone_4.png"),width=400)
+        # st.image(os.path.join(dir_path,"..","img","git_clone_4.png")) Para deploy
+        st.markdown("- Seleccionas una carpeta que esté vacia para tu espacio de trabajo.")
+        st.image(("../img/git_clone_5.png"))
+        # st.image(os.path.join(dir_path,"..","img","git_clone_5.png")) Para deploy
+        st.markdown("- En la consola del VSC, dentro de tu carpeta que está alojada en tu espacio de trabajo nuevo, escribe git clone <link-del-repositorio>")
+        st.image(("../img/git_clone_3.png"))
+        # st.image(os.path.join(dir_path,"..","img","git_clone_3.png")) Para deploy
+
+
+# HACER ADD,COMMIT Y PUSH    
+
     if option_info == "Como añadir nueva información a mi repositorio": # Aquí habrá dos checkbox para no meter mucha información de una vez.
         
         añad_info_term = st.checkbox("Añadir información desde terminal") # Primer checkbox información
@@ -62,29 +90,41 @@ def info_main():
             st.markdown("- Después solo hay que hacer commit & push haciendo click")
             st.image(("../img/add_2_ejemplo_infc.png"))
             # st.image(os.path.join(dir_path,"..","img","add_2_ejemplo_infc.png")) Para deploy
-            
+
+# HACER BRANCH
+
+    if option_info == "Utilización y creación de ramas (branch)": # Aquí habrá checkbox para no meter mucha información de una vez.
+        añad_info_branch_1 = st.checkbox("¿Que es una rama (branch)?") # Primer checkbox branch 
+        if añad_info_branch_1:
+            st.markdown("- Las ramas son importantes en el desarrollo de proyectos en Github. Usando ramas, varias personas pueden trabajar en paralelo en el mismo proyecto simultáneamente. Podemos usar el comando git branch para crearlas, listarlas y eliminarlas.")
+        añad_info_branch_2 = st.checkbox("¿Como crear una rama (branch) por terminal?") # Segundo checkbox branch  
+        if añad_info_branch_2:
+            st.markdown("- Por terminal podemos utilizar los comandos siguientes para crear, listar y eliminar una branch en local. ")
+            st.markdown("- git branch <nombre de tu branch>  - Con este comando creamos una branch en nuestro ordenador de manera local")
+            st.markdown("- git branch --list - Con este comando vemos las ramas que tenemos actualmente en el repositorio")
+            st.markdown("- git checkout <nombre de tu branch que has creado anteriormente> - Con este comando nos moveremos a la branch que has creado para poder trabajar en ella.")
+            st.markdown("- git branch -d <nombre de tu branch que has creado anteriormente> - Con este comando podremos borrar la branch que hemos creado anteriormente(tienes que estar fuera de la branch que quieres borrar porque dará error)")
+            st.image(("../img/branch_1.png"))
+            # st.image(os.path.join(dir_path,"..","img","branch_2.png")) Para deploy
+        añad_info_branch_3 = st.checkbox("¿Como crear una rama (branch) con la interface de VSC?") # Tercer checkbox branch 
+        if añad_info_branch_3:
+            st.image(("../img/branch_3.png"))
+            # st.image(os.path.join(dir_path,"..","img","branch_3.png")) Para deploy
+
+# HACER MERGE      
+ 
+    # if option_info == "Juntar ramas (branch) y mezclar información de diferentes ramas ": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
+
+# RESOLUCION DE CONFLICTOS
+
+    # if option_info == "Resolución de conflictos": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
+
 def com_bas():
     st.markdown ("<h2 style='text-align: center; color: black;'>Comandos basicos de Git Hub</h2>",unsafe_allow_html=True)
     st.markdown("#### En este apartado tendras acceso a los comandos básicos de git hub")
-    option = st.selectbox(("¿Que comando quieres utilizar?"),("ADD","Commit","Clone"),index=None,placeholder="Seleccione el comando")
-    if option == "Clone":
-        st.markdown ("<h2 style='text-align: center; color: black;'>Git Clone</h2>",unsafe_allow_html=True)
-        st.markdown("#### Es un comando que permite realizar una copia idéntica de la última versión de un proyecto y la guarda en tu ordenador")
-        st.markdown("- Primero entra en el repositorio y haz click en code")
-        st.image(("../img/git_clone.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_clone.png")) Para deploy
-        st.markdown("- Después haz click en el icono indicado y copia el enlace")
-        st.image(("../img/git_clone_2.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_clone_2.png")) Para deploy
-        st.markdown("- Antes de hacer el git clone debes añadir un espacio de trabajo nuevo.")
-        st.image(("../img/git_clone_4.png"),width=400)
-        # st.image(os.path.join(dir_path,"..","img","git_clone_4.png")) Para deploy
-        st.markdown("- Seleccionas una carpeta que esté vacia para tu espacio de trabajo.")
-        st.image(("../img/git_clone_5.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_clone_5.png")) Para deploy
-        st.markdown("- En la consola del VSC, dentro de tu carpeta que está alojada en tu espacio de trabajo nuevo, escribe git clone <link-del-repositorio>")
-        st.image(("../img/git_clone_3.png"))
-        # st.image(os.path.join(dir_path,"..","img","git_clone_3.png")) Para deploy
+    # option = st.selectbox(("¿Que comando quieres utilizar?"),("ADD","Commit","Clone"),index=None,placeholder="Seleccione el comando")
+    # if option == "Clone":
+        
 def link_repo():
     st.markdown ("<h2 style='text-align: center; color: black;'>Enlaces a repositorios</h2>",unsafe_allow_html=True)
     st.markdown ("##### Escoger el enlace correspondiente a tu nombre y aplicar un git clone al repositorio adecuado.")
