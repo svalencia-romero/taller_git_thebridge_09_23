@@ -134,15 +134,39 @@ def info_main():
 # HACER MERGE      
  
     if option_info == "Juntar ramas y actualizar cambios": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
-        st.markdown("* Información relacionada con merge")
-        # st.image(("../img/branch_3_int_sc.png"))
-        # st.image(os.path.join(dir_path,"..","img","branch_3_int_sc.png")) Para deploy
+        st.markdown("* Una vez realizado el desarrollo de tu parte del proyecto en tu rama, queda fusionar la rama con la rama padre(dev o main), tienes que estar en esa rama para poder fusionar los archivos con tu rama")
+        # st.image(("../img/merge_1.png"))
+        st.image(os.path.join(dir_path,"..","img","merge_1.png")) # Para deploy
+        st.markdown("* De la misma manera podemos hacer el merge desde la interface. (Siempre tener en cuenta desde donde estamos haciendo el merge y que queremos obtener de ello, aún así recomendable hacerlo por terminal)")
+        # st.image(("../img/merge_2.png"))
+        st.image(os.path.join(dir_path,"..","img","merge_2.png")) # Para deploy
+
         
         
 # RESOLUCION DE CONFLICTOS
 
     if option_info == "Resolución de conflictos": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
-        st.markdown("* Información relacionada con conflictos")
+        st.markdown("* Hay veces que el código que un compañer@ entra en conflicto con el código tuyo y al intentar mezclarlos, hay que revisarlos.")
+        # st.image(("../img/conflictos merge.png"))
+        st.image(os.path.join(dir_path,"..","img","conflictos merge.png")) # Para deploy
+        st.markdown("* Al mirar el source control veremos que hay conflictos en el archivos que tendremos que resolver")
+        # st.image(("../img/conflictos merge_2.png"))
+        st.image(os.path.join(dir_path,"..","img","conflictos merge_2.png")) # Para deploy
+        st.markdown("* Si pulsamos sobre \"Resolve in merge editor\" obtendremos la siguiente pantalla")
+        # st.image(("../img/conflictos merge_3.png"))
+        st.image(os.path.join(dir_path,"..","img","conflictos merge_3.png")) # Para deploy
+        st.markdown("* Resolveremos los conflictos y nos dispondremos a hacer el commit")
+        # st.image(("../img/conflictos merge_4.png"))
+        st.image(os.path.join(dir_path,"..","img","conflictos merge_4.png")) # Para deploy
+        st.markdown("* Sincronizamos los cambios y clickamos mas tarde \"OK\"")
+        # st.image(("../img/conflictos merge_5.png"))
+        st.image(os.path.join(dir_path,"..","img","conflictos merge_5.png")) # Para deploy
+        # st.image(("../img/conflictos merge_6.png"))
+        st.image(os.path.join(dir_path,"..","img","conflictos merge_6.png")) # Para deploy
+
+
+
+
 
 # COMANDOS BÁSICOS
 
@@ -167,6 +191,8 @@ def com_bas():
     st.markdown("* git branch <nombre de tu rama>")
     st.markdown("#### Borrar una rama")
     st.markdown("* git branch -d")
+    st.markdown("#### Vemos las ramas creadas remotamente por otros usuarios de manera remota")
+    st.markdown("* git branch -a")
     st.markdown("#### Cambiarte a la rama que quieras")
     st.markdown("* git checkout <nombre de tu rama>")
     st.markdown("#### Crear una rama y a la vez cambiarte a la misma")
@@ -179,9 +205,9 @@ def com_bas():
     st.markdown("* git status")
     st.markdown("#### Deshacer un commit que nosotros queramos")
     st.markdown("* git revert <el código de commit que quieres deshacer>")
-    st.markdown("#### Deshacer un commit que nosotros queramos")
-    st.markdown("#### Deshacer un commit que nosotros queramos")
-    st.markdown("#### Deshacer un commit que nosotros queramos")
+    st.markdown("#### Mezclar la información de dos ramas, siempre estando en la rama donde quieres llevar los datos de tu rama")
+    st.markdown("* git merge <branch-que-quieres-mezclar>")
+    
 
 
 # ENLACES A REPOSITORIOS
