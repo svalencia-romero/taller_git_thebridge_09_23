@@ -18,7 +18,7 @@ st.image(os.path.join(dir_path,"..","img","git_image.jpg")) #Para deploy
 page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y contenido del taller", "Resumen lista comandos básicos", "Enlaces a repositorios"),index=None,placeholder="Selección de contenido")
 
 def info_main():
-    st.markdown ("<h2 style='text-align: center; color: black;'>Introducción a GitHub y contenido del taller</h2>",unsafe_allow_html=True)
+    st.markdown ("<h2 style='text-align: center;'>Introducción a GitHub y contenido del taller</h2>",unsafe_allow_html=True)
 
 # SELECTOR CONTENIDO EN MAIN 
 
@@ -147,7 +147,7 @@ def info_main():
 # COMANDOS BÁSICOS
 
 def com_bas():
-    st.markdown ("<h2 style='text-align: center; color: black;'>Comandos basicos de Git Hub</h2>",unsafe_allow_html=True)
+    st.markdown ("<h2 style='text-align: center;'>Comandos basicos de Git Hub</h2>",unsafe_allow_html=True)
     st.markdown("#### En este apartado tendras acceso a los comandos básicos de git hub:")
     st.markdown("#### Clonar el repositorio")
     st.markdown("* git clone <link del repositorio>")
@@ -188,7 +188,7 @@ def com_bas():
     
         
 def link_repo():
-    st.markdown ("<h2 style='text-align: center; color: black;'>Enlaces a repositorios</h2>",unsafe_allow_html=True)
+    st.markdown ("<h2 style='text-align: center;'>Enlaces a repositorios</h2>",unsafe_allow_html=True)
     st.markdown ("##### Escoger el enlace correspondiente a tu nombre y aplicar un git clone al repositorio adecuado.")
     st.markdown ("###### (Solo os voy a dar acceso al repositorio indicado por lo que solo podreis acceder al repositorio que tiene vuestro nombre)")
     # Botones de enlace a cada repositorio 
