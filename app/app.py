@@ -5,10 +5,11 @@ import os
 # Para hacer deploy en streamlit, descomentar lineas de imagenes con paths correctos y comentar la linea anterior.
 
 
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # Inicio de git, opciones y menus
-st.markdown("<h1 style='text-align: center; color: black;'>Taller de Git Hub 2023</h1>", unsafe_allow_html=True) 
+st.markdown("<h1 style='text-align: center;'>Taller de Git Hub 2023</h1>", unsafe_allow_html=True) 
 # st.image(("../img/git_image.jpg"))
 st.image(os.path.join(dir_path,"..","img","git_image.jpg")) #Para deploy
 
