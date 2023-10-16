@@ -167,7 +167,7 @@ def com_bas():
     st.markdown("#### Borrar una rama")
     st.markdown("* git branch -d")
     st.markdown("#### Cambiarte a la rama que quieras")
-    st.markdown("* git checkout <nombre de tu rama")
+    st.markdown("* git checkout <nombre de tu rama>")
     st.markdown("#### Crear una rama y a la vez cambiarte a la misma")
     st.markdown("* git checkout -b <nombre de la rama que quieres crear>")
     st.markdown("#### Muestra los cambios en el repositorio en orden cronologico inverso, primero la más actual a la más antigua (si quieres salir pulsa \"q\")")
