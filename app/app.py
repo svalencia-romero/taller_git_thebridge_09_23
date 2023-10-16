@@ -191,7 +191,7 @@ def com_bas():
     st.markdown("* git branch <nombre de tu rama>")
     st.markdown("#### Borrar una rama")
     st.markdown("* git branch -d")
-    st.markdown("#### Vemos las ramas creadas remotamente por otros usuarios de manera remota")
+    st.markdown("#### Vemos las ramas creadas remotamente por otros usuarios")
     st.markdown("* git branch -a")
     st.markdown("#### Cambiarte a la rama que quieras")
     st.markdown("* git checkout <nombre de tu rama>")
