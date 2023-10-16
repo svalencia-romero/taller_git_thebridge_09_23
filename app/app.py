@@ -15,7 +15,7 @@ st.image(os.path.join(dir_path,"..","img","git_image.jpg")) #Para deploy
 
 # SELECTOR DE TODO EL CONTENIDO 
 
-page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y contenido del taller", "Resumen lista comandos básicos", "Enlaces a repositorios"),index=None,placeholder="Selección de contenido")
+page = st.sidebar.selectbox("Selecciona una página", ("Introducción a GitHub y contenido del taller", "Resumen lista comandos básicos", "Enlaces a repositorios","Ejercicio practico en grupos"),index=None,placeholder="Selección de contenido")
 
 def info_main():
     st.markdown ("<h2 style='text-align: center;'>Introducción a GitHub y contenido del taller</h2>",unsafe_allow_html=True)
@@ -146,10 +146,10 @@ def info_main():
 # RESOLUCION DE CONFLICTOS
 
     if option_info == "Resolución de conflictos": # Aquí habrá dos checkbox para no meter mucha información de una vez.       
-        st.markdown("* Hay veces que el código que un compañer@ entra en conflicto con el código tuyo y al intentar mezclarlos, hay que revisarlos.")
+        st.markdown("* Hay veces que el código de un compañer@ entra en conflicto con el código tuyo y al intentar mezclarlos, hay que revisarlos.")
         # st.image(("../img/conflictos merge.png"))
         st.image(os.path.join(dir_path,"..","img","conflictos merge.png")) # Para deploy
-        st.markdown("* Al mirar el source control veremos que hay conflictos en el archivos que tendremos que resolver")
+        st.markdown("* Al ver el source control observamos que hay conflictos en el archivo que tendremos que resolver")
         # st.image(("../img/conflictos merge_2.png"))
         st.image(os.path.join(dir_path,"..","img","conflictos merge_2.png")) # Para deploy
         st.markdown("* Si pulsamos sobre \"Resolve in merge editor\" obtendremos la siguiente pantalla")
@@ -240,6 +240,9 @@ def link_repo():
     st.link_button("Repositorio de Sara","https://github.com/TiagoValen/githubtaller_sara")
     st.link_button("Repositorio de Steven","https://github.com/TiagoValen/githubtaller_steven")
 
+def ejer_grp():
+    st.markdown ("Toda la información relativa a la practica grupal la teneis en el siguiente [enlace](https://github.com/svalencia-romero/taller_git_thebridge_09_23/blob/main/Practica/Ejercicio_practico.pdf).")  
+
 # Configuración de la página y de menu de selección de taller
 
 if page == "Introducción a GitHub y contenido del taller":
@@ -248,3 +251,6 @@ elif page == "Resumen lista comandos básicos":
     com_bas()
 elif page == "Enlaces a repositorios":
     link_repo()
+elif page == "Ejercicio practico en grupos":
+    ejer_grp()
+    
