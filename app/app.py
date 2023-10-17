@@ -22,7 +22,7 @@ def info_main():
 
 # SELECTOR CONTENIDO EN MAIN 
 
-    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas y actualizar cambios","Resolución de conflictos","Pull Request, ¿que es y para que sirve?"]),index=None,placeholder="Seleccione la información")
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas y actualizar cambios","Pull Request, ¿que es y para que sirve?","Resolución de conflictos"]),index=None,placeholder="Seleccione la información")
     
     if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
         st.markdown("- Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
