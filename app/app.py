@@ -22,7 +22,7 @@ def info_main():
 
 # SELECTOR CONTENIDO EN MAIN 
 
-    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas y actualizar cambios","Resolución de conflictos"]),index=None,placeholder="Seleccione la información")
+    option_info = st.selectbox(("¿A qué información quieres acceder?"),(["¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.","Primeros pasos en Git Hub, configuración de github en VSC y creación de repositorio","Clonar repositorio en VSC","Como añadir nueva información a mi repositorio","Utilización y creación de ramas (branch)","Juntar ramas y actualizar cambios","Resolución de conflictos","Pull Request, ¿que es y para que sirve?"]),index=None,placeholder="Seleccione la información")
     
     if option_info == "¿Que es Git?, ¿Que es Git Hub?, diferencias entre ambas.":
         st.markdown("- Git es un sistema de control de versiones distribuido. Es una herramienta que permite a los desarrolladores rastrear los cambios en su código fuente a lo largo del tiempo.")
@@ -98,6 +98,8 @@ def info_main():
         añad_info_branch_1 = st.checkbox("¿Que es una rama (branch)?") # Primer checkbox branch 
         if añad_info_branch_1:
             st.markdown("- Las ramas son importantes en el desarrollo de proyectos en Github. Usando ramas, varias personas pueden trabajar en paralelo en el mismo proyecto simultáneamente. Podemos usar el comando git branch para crearlas, listarlas y eliminarlas.")
+            # st.image(("../img/git_branch_merge_1.png"))
+            st.image(os.path.join(dir_path,"..","img","git_branch_merge_1.png")) #Para deploy
         añad_info_branch_2 = st.checkbox("¿Como crear una rama (branch) por terminal?") # Segundo checkbox branch  
         if añad_info_branch_2:
             st.markdown("- Por terminal podemos utilizar los comandos siguientes para crear, listar y eliminar una branch en local. ")
@@ -141,7 +143,28 @@ def info_main():
         # st.image(("../img/merge_2.png"))
         st.image(os.path.join(dir_path,"..","img","merge_2.png")) # Para deploy
 
-        
+# PULL REQUEST
+
+    if option_info == "Pull Request, ¿que es y para que sirve?":
+        st.markdown("* Los Pull Requests son una parte fundamental del flujo de trabajo colaborativo en el desarrollo de software. Permiten a los desarrolladores revisar, discutir y aprobar los cambios antes de que se integren en el código base principal, lo que contribuye a mantener un alto nivel de calidad y a prevenir problemas.")
+        st.markdown("* Primero antes de hacer un pull request necesitamos tener todo el trabajo listo en nuestra rama y haber hecho \"push\" anteriormente, ahora seguiremos los siguiente pasos en la web")
+        # st.image(("../img/pull_request_1.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_1.png")) # Para deploy
+        # st.image(("../img/pull_request_1_1.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_1_1.png")) # Para deploy
+        st.markdown("* Importante saber que información queremos mezclar y ver de que rama a que rama queremos pasar la información")
+        # st.image(("../img/pull_request_2.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_2.png")) # Para deploy
+        # st.image(("../img/pull_request_2_1.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_2_1.png")) # Para deploy
+        # st.image(("../img/pull_request_3.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_3.png")) # Para deploy
+        # st.image(("../img/pull_request_4.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_4.png")) # Para deploy
+        st.markdown("* Una vez hecho el merge de ramas podemos borrar la rama que hemos mezclado con la principal") 
+        # st.image(("../img/pull_request_5.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_5.png")) # Para deploy
+            
         
 # RESOLUCION DE CONFLICTOS
 
