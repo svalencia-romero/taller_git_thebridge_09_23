@@ -47,6 +47,7 @@ def info_main():
             st.markdown("- Esta es la pantalla de creación de repositorio.")
             # st.image(("../img/git_config_3.png"))
             st.image(os.path.join(dir_path,"..","img","git_config_3.png")) #Para deploy
+
 # CLONAR REPOSITORIO
 
     if option_info == "Clonar repositorio en VSC":
@@ -142,28 +143,6 @@ def info_main():
         st.markdown("* De la misma manera podemos hacer el merge desde la interface. (Siempre tener en cuenta desde donde estamos haciendo el merge y que queremos obtener de ello, aún así recomendable hacerlo por terminal)")
         # st.image(("../img/merge_2.png"))
         st.image(os.path.join(dir_path,"..","img","merge_2.png")) # Para deploy
-
-# PULL REQUEST
-
-    if option_info == "Pull Request, ¿que es y para que sirve?":
-        st.markdown("* Los Pull Requests son una parte fundamental del flujo de trabajo colaborativo en el desarrollo de software. Permiten a los desarrolladores revisar, discutir y aprobar los cambios antes de que se integren en el código base principal, lo que contribuye a mantener un alto nivel de calidad y a prevenir problemas.")
-        st.markdown("* Primero antes de hacer un pull request necesitamos tener todo el trabajo listo en nuestra rama y haber hecho \"push\" anteriormente, ahora seguiremos los siguiente pasos en la web")
-        # st.image(("../img/pull_request_1.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_1.png")) # Para deploy
-        # st.image(("../img/pull_request_1_1.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_1_1.png")) # Para deploy
-        st.markdown("* Importante saber que información queremos mezclar y ver de que rama a que rama queremos pasar la información")
-        # st.image(("../img/pull_request_2.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_2.png")) # Para deploy
-        # st.image(("../img/pull_request_2_1.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_2_1.png")) # Para deploy
-        # st.image(("../img/pull_request_3.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_3.png")) # Para deploy
-        # st.image(("../img/pull_request_4.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_4.png")) # Para deploy
-        st.markdown("* Una vez hecho el merge de ramas podemos borrar la rama que hemos mezclado con la principal") 
-        # st.image(("../img/pull_request_5.png"))
-        st.image(os.path.join(dir_path,"..","img","pull_request_5.png")) # Para deploy
             
         
 # RESOLUCION DE CONFLICTOS
@@ -186,6 +165,28 @@ def info_main():
         st.image(os.path.join(dir_path,"..","img","conflictos merge_5.png")) # Para deploy
         # st.image(("../img/conflictos merge_6.png"))
         st.image(os.path.join(dir_path,"..","img","conflictos merge_6.png")) # Para deploy
+
+# PULL REQUEST
+
+    if option_info == "Pull Request, ¿que es y para que sirve?":
+        st.markdown("* Los Pull Requests son una parte fundamental del flujo de trabajo colaborativo en el desarrollo de software. Permiten a los desarrolladores revisar, discutir y aprobar los cambios antes de que se integren en el código base principal, lo que contribuye a mantener un alto nivel de calidad y a prevenir problemas.")
+        st.markdown("* Primero antes de hacer un pull request necesitamos tener todo el trabajo listo en nuestra rama y haber hecho \"push\" anteriormente, ahora seguiremos los siguiente pasos en la web")
+        # st.image(("../img/pull_request_1.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_1.png")) # Para deploy
+        # st.image(("../img/pull_request_1_1.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_1_1.png")) # Para deploy
+        st.markdown("* Importante saber que información queremos mezclar y ver de que rama a que rama queremos pasar la información")
+        # st.image(("../img/pull_request_2.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_2.png")) # Para deploy
+        # st.image(("../img/pull_request_2_1.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_2_1.png")) # Para deploy
+        # st.image(("../img/pull_request_3.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_3.png")) # Para deploy
+        # st.image(("../img/pull_request_4.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_4.png")) # Para deploy
+        st.markdown("* Una vez hecho el merge de ramas podemos borrar la rama que hemos mezclado con la principal") 
+        # st.image(("../img/pull_request_5.png"))
+        st.image(os.path.join(dir_path,"..","img","pull_request_5.png")) # Para deploy
 
 
 
