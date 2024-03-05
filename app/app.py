@@ -250,7 +250,7 @@ def link_repo():
 
 
 def ejer_grp():
-    st.markdown ("Toda la información relativa a la practica grupal la teneis en el siguiente [enlace](https://github.com/svalencia-romero/taller_git_thebridge_09_23/blob/main/Practica/Ejercicio_practico.pdf).")  
+    st.markdown ("Toda la información relativa a la practica grupal la teneis en el siguiente [enlace](https://github.com/svalencia-romero/taller_git_thebridge_09_23/blob/main/Practica/Ejercicio_practico_grp.pdf).")  
 
 # Configuración de la página y de menu de selección de taller
 
