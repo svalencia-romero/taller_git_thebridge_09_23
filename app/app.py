@@ -242,11 +242,11 @@ def link_repo():
     st.markdown ("##### Escoger el enlace correspondiente a tu nombre y aplicar un git clone al repositorio adecuado.")
     st.markdown ("###### (Solo os voy a dar acceso al repositorio indicado por lo que solo podreis acceder al repositorio que tiene vuestro nombre)")
     # Botones de enlace a cada repositorio 
-    # st.link_button("Repositorio de Alicia","")
-    # st.link_button("Repositorio de Ana","")
-    # st.link_button("Repositorio de Javi","")
-    # st.link_button("Repositorio de Nico","")
-    # st.link_button("Repositorio de Teresa","")
+    st.link_button("Repositorio de Alicia","https://github.com/TiagoValen/githubtaller_Alicia")
+    st.link_button("Repositorio de Ana","https://github.com/TiagoValen/githubtaller_Ana_")
+    st.link_button("Repositorio de Javi","https://github.com/TiagoValen/githubtaller_Javi")
+    st.link_button("Repositorio de Nico","https://github.com/TiagoValen/githubtaller_Nico")
+    st.link_button("Repositorio de Teresa","https://github.com/TiagoValen/githubtaller_Teresa")
 
 
 def ejer_grp():
